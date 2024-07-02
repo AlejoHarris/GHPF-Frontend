@@ -8,6 +8,8 @@ RUN npm install
 COPY src /app/src
 COPY public /app/public
 
+ARG REACT_APP_APIURL
+ENV REACT_APP_APIURL=$REACT_APP_APIURL
 
 RUN npm run build
 
